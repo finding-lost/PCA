@@ -1,0 +1,455 @@
+/* ==========================================================
+   Public Complaint Authority
+   PCA Doc 01-2026
+========================================================== */
+
+:root {
+    --olive-green: #5b6447;
+    --dark-olive: #3f4631;
+    --gold: #b08d45;
+    --paper: #f5f1e8;
+    --ink: #222222;
+    --border: #c8b98a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.65;
+}
+
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.official-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: var(--olive-green);
+    color: white;
+
+    padding: 18px 45px;
+
+    border-bottom: 5px solid var(--gold);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+}
+
+.seal {
+    width: 125px;
+    margin-right: 20px;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-name {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.6rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+.brand-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    margin-top: 5px;
+}
+
+.established {
+    margin-top: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.5px;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.tagline {
+    margin-top: 9px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 0.98rem;
+    font-style: italic;
+}
+
+
+/* ==========================================================
+   NAVIGATION
+========================================================== */
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    letter-spacing: 0.3px;
+    text-transform: none;
+
+    transition: color 0.2s ease;
+}
+
+.main-nav a:hover {
+    color: var(--gold);
+}
+
+
+/* ==========================================================
+   MAIN CONTENT
+========================================================== */
+
+main {
+    max-width: 900px;
+    margin: 30px auto 45px;
+    padding: 0 25px;
+}
+
+section {
+    padding: 35px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+h2 {
+    color: var(--dark-olive);
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 18px;
+}
+
+
+/* ==========================================================
+   COMPLAINT BUTTON
+========================================================== */
+
+.button {
+    display: inline-block;
+
+    margin-top: 8px;
+    padding: 13px 30px;
+
+    background: var(--dark-olive);
+    color: white;
+
+    border: 1px solid var(--gold);
+
+    text-decoration: none;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.92rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.button:hover {
+    background: var(--olive-green);
+}
+
+
+/* ==========================================================
+   RECENT MATTERS
+========================================================== */
+
+.matters ul {
+    padding-left: 22px;
+}
+
+.matters li {
+    margin-bottom: 9px;
+}
+
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+footer {
+    margin-top: 25px;
+
+    background: var(--dark-olive);
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+
+    border-top: 3px solid var(--gold);
+
+    font-size: 0.85rem;
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 900px) {
+
+    .official-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .main-nav {
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .official-header {
+        padding: 18px 25px;
+    }
+
+    .seal {
+        width: 80px;
+        margin-right: 15px;
+    }
+
+    .brand-name {
+        font-size: 2.1rem;
+        letter-spacing: 1px;
+    }
+
+    .brand-title {
+        font-size: 0.85rem;
+    }
+
+    .tagline {
+        font-size: 0.9rem;
+    }
+
+    .main-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+}
+
+/* ==========================================================
+   COMPLAINT FORM
+========================================================== */
+
+.complaint-page {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.complaint-page .intro {
+    margin-bottom: 32px;
+}
+
+.complaint-form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+
+    color: var(--dark-olive);
+}
+
+.form-group input,
+.form-group textarea {
+    display: block;
+
+    width: 100%;
+
+    padding: 11px 12px;
+
+    background: #fff;
+
+    border: 1px solid #aaa;
+
+    border-radius: 0;
+
+    color: var(--ink);
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1rem;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+
+    border-color: var(--olive-green);
+
+    box-shadow: 0 0 0 2px rgba(91, 100, 71, 0.15);
+}
+
+
+/* ==========================================================
+   DISCLAIMER CHECKBOX
+========================================================== */
+
+.disclaimer-check {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 10px;
+
+    margin: 32px 0;
+
+    padding: 18px;
+
+    background: rgba(91, 100, 71, 0.06);
+
+    border: 1px solid var(--border);
+}
+
+.disclaimer-check input {
+    flex-shrink: 0;
+
+    width: 18px;
+    height: 18px;
+
+    margin-top: 3px;
+
+    accent-color: var(--dark-olive);
+}
+
+.disclaimer-check label {
+    font-size: 0.88rem;
+    line-height: 1.5;
+}
+
+.disclaimer-check a {
+    color: var(--dark-olive);
+
+    font-weight: 700;
+
+    text-decoration: underline;
+}
+
+.disclaimer-check a:hover {
+    color: var(--olive-green);
+}
+
+
+/* ==========================================================
+   FORM BUTTON
+========================================================== */
+
+.complaint-form .button {
+    cursor: pointer;
+
+    border-radius: 0;
+}
+
+/* ==========================================================
+   ABOUT PAGE
+========================================================== */
+
+.about-page {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-page p {
+    margin-bottom: 22px;
+}
+
+.about-closing {
+    margin-top: 35px;
+    margin-bottom: 0 !important;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.15rem;
+    font-style: italic;
+
+    color: var(--dark-olive);
+}
+
+/* ==========================================================
+   DISCLAIMER PAGE
+========================================================== */
+
+.disclaimer-page {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.disclaimer-page p {
+    margin-bottom: 22px;
+}
+
+.disclaimer-closing {
+    margin-top: 35px;
+    margin-bottom: 0 !important;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.05rem;
+    font-style: italic;
+
+    color: var(--dark-olive);
+}
