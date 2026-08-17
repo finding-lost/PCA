@@ -465,33 +465,16 @@ footer {
 }
 
 .status-box {
-    display: flex;
-    align-items: center;
-
     margin: 30px 0;
     padding: 16px 20px;
 
     border-left: 5px solid var(--gold);
     background: rgba(91, 100, 71, 0.07);
-}
-
-.status-label {
-    margin-right: 18px;
 
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.8rem;
-    font-weight: 700;
-
-    text-transform: uppercase;
-    letter-spacing: 0.8px;
-
     color: var(--dark-olive);
 }
 
-.status-value {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1rem;
-    font-weight: 700;
-
-    color: var(--dark-olive);
+.status-box p {
+    margin: 0;
 }
